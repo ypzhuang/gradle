@@ -8,8 +8,8 @@ ENV PATH $PATH:/opt/gradle-${GRADLE_VERSION}/bin
 
 WORKDIR /opt
 
-RUN apt-get update && \
-    apk --no-cache add openssl \
+RUN apk update  && \
+    apk --no-cache add openssl 
 
 RUN wget -O gradle.zip  $GRADLE_DOWNLOAD_URL && unzip gradle.zip && rm gradle.zip
 
